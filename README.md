@@ -15,19 +15,18 @@ Unlike some similar proprietary solutions, Authenticated taps use well establish
 ![MagicNFC URL](https://github.com/martinpaljak/NFC/blob/645d0221b34a34299daa90e06a5687e6a8aea54a/images/MagicNFC%20URL.png)
 Elements of the URL:
 - Your free-form base URL, with or without existing GET query parameters
-- `v` - version of the Authenticated tap URL
-- `i` - JWT Thumbprint of the public key used to sign the URL
+- `v` - version of the Authenticated tap URL. Version 1 is P-256 with R||S signature, Version
+- `i` - JWK Thumbprint of the public key used to sign the URL. This is the identity of the MagicNFC device
 - `c` - base64url encoded `uint32` counter, increased on every tap
 - `s` - JWS compatible ECDSA signature of the whole URL, up to and including the `s=`
 
 
 ### Specifications
-| Supported algorithms |
-|----------------------|
-| NIST P-256 |
-| Secp256k1 Koblitz "Bitcoin curve" |
+| Supported algorithms | Protocol Version |
+|----------------------|-----------|
+| NIST P-256 | 1, signature is R and S concatenated |
+| Secp256k1 Koblitz "Bitcoin curve" | 2, signature is DER encoded |
 
+Java backend library and JavaScript library for web developers included.
 
-## WebKey
-
-WebKey is the seamless 
+# Variations
