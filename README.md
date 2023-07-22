@@ -5,6 +5,8 @@ As a user I'm always looking for seamless and ubiquitious experiences that "Just
 
 JavaCardPro NFC suite (MagicNFC) is the convergence of mobile web and physical world (NFC tags), underlined by modern PKI based security. Usable with the most ubiquitious computing platform - smartphones. Without requiring any extra apps.
 
+Technically: MagicNFC provides a JavaCard application with the AID of `D2760000850101` that implements a [NFC Forum Type 4 tag](https://nfc-forum.org/build/specifications) with a NDEF payload of a dynamic URL.
+
 ## Authenticated tap
 
 Unlike some similar proprietary solutions, Authenticated taps use well established, developer-friendly and modern web based technologies:
